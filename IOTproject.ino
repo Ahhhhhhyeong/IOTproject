@@ -14,8 +14,8 @@
 #include <WiFiServerSecure.h>
 #include <WiFiUdp.h>
 
-const char *ssid = "MTPC4-NEW(2G)";   ////Wifi ID
-const char *password = "10821082";   ////Wifi password
+const char *ssid = "wifiID";   ////Wifi ID
+const char *password = "password";   ////Wifi password
 
 //////////MLX90614/////////////////
 Adafruit_MLX90614 mlx = Adafruit_MLX90614();
@@ -84,7 +84,7 @@ void loop() {
               break;
             }
         
-            client.print(String("GET /") + "api?deviceName=testDevice1&temp=" + temp1 + " HTTP/1.1\r\n" + 
+            client.print(String("GET /") + "serverHost" + temp1 + " HTTP/1.1\r\n" + 
                     "Host: " + host + "\r\n" +
                     "Connection: close\r\n" + "\r\n");
         
