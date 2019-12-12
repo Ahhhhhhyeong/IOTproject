@@ -58,7 +58,7 @@ void loop() {
   if(temp == LOW){ //push the button
     ///////SERVER CONNECTED///////
       WiFiClient client;
-      String host = "petstart.herokuapp.com";
+      String host = "HOST";
     
       bool connected = client.connect(host, 80);
     
@@ -84,7 +84,7 @@ void loop() {
               break;
             }
         
-            client.print(String("GET /") + "serverHost" + temp1 + " HTTP/1.1\r\n" + 
+            client.print(String("GET /") + "server" + temp1 + " HTTP/1.1\r\n" + 
                     "Host: " + host + "\r\n" +
                     "Connection: close\r\n" + "\r\n");
         
